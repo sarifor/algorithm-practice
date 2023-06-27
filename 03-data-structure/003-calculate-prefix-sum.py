@@ -11,6 +11,6 @@ for i in numbers:
     temp = temp + i
     prefix_sum.append(temp)
 
-for i in range(quizNo):
+for i in range(quizNo): # Repeat quizNo times
     s, e = map(int, input().split())
     print(prefix_sum[e] - prefix_sum[s-1])
