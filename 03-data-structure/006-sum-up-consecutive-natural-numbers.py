@@ -13,7 +13,7 @@ while end_index != n:
         sum += end_index
     elif sum > n:
         sum -= start_index
-        start_index + 1
+        start_index += 1
     else:
         end_index += 1
         sum += end_index
