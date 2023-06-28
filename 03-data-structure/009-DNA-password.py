@@ -1,5 +1,6 @@
 # Baekjoon 12891
-# 문자열을 입력받아, 각 문자가 개수 조건에 맞는지, 지정 범위를 이동시켜 가며 검증하고, 맞는다면 유효한 비밀번호로 친다.
+# Input string and check if each character meets the quantity condition by moving the window a unit distance ahead.
+# If the conditions are met, consider it a valid password.
 
 checkList = [0] * 4 
 myList = [0] * 4
