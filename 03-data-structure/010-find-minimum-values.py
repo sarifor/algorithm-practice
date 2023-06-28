@@ -11,7 +11,8 @@ for i in range(N): # N만큼 반복
         mydeque.pop()
     mydeque.append((now[i], i)) # (값, 인덱스) 순 저장
 
-    # 덱의 1번째 위치에서부터 L의 범위를 벗어난 값(now index-L <= index)을 덱에서 제거
+    # 덱의 1번째 위치에서부터 L의 '범위를 벗어난 값(now index-L <= index)'을 덱에서 제거  
+    # "범위가 i+L+1 ~ i이니, 범위를 벗어난 값은 i - L까지가 된다"
     if mydeque[0][1] <= i - L: # 덱의 첫 번째 값의 '인덱스'
         mydeque.popleft()
     
