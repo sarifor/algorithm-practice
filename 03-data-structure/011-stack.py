@@ -1,6 +1,6 @@
 # Baekjoon 1874
-# 자연수 1부터 N까지 오름차순으로 스택에 push하며, 적절히 pop해 주어진 수열을 만들면 된다.
-# 스택의 맨 위 값이 만들어야 하는 수열의 값과 같으면 pop하고, 그 이상 커지면 계산을 중지한다.
+# Push natural numbers from 1 to N in ascending order to a stack, and pop it appropriately to create a given array.
+# Pop if the top value of the stack is equal to the value of the given array, and stop operations if it becomes larger than that.
 
 N = int(input()) # 만들어야 하는 수열의 개수
 A = [0]*N
