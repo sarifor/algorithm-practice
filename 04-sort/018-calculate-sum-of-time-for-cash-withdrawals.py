@@ -5,7 +5,7 @@ A = list(map(int, input().split()))
 S = [0]*N
 
 for i in range(1, N):
-    insert_pint = i
+    insert_point = i
     insert_value = A[i]
     for j in range(i-1, -1, -1):
         if A[j] < A[i]:
