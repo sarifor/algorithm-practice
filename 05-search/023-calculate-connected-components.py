@@ -1,4 +1,6 @@
 # Baekjoon 11724
+# 그래프를 준비하고, 모든 노드를 방문할 때까지 DFS를 진행한다.
+# DFS 실행 횟수는 연결 요소 개수와 같다.
 
 import sys
 sys.setrecursionlimit(10000)
