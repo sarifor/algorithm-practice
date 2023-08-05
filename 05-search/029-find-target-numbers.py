@@ -1,8 +1,6 @@
 # Backjoon 1920
-# 데이터가 정렬되어 있는 상태에서 원하는 값을 찾는다.
-# 대상 데이터의 중앙값과 찾고자 하는 값을 비교해,
-# 데이터의 크기를 절반씩 줄이면서 대상을 찾고,
-# '중앙값 == 타깃 데이터'일 때 탐색을 종료한다.
+# Find the target in a sorted array by repeatedly dividing the search interval in half.
+# If the target is found at middle element, the process is terminated.
 
 N = int(input())
 A = list(map(int, input().split()))
