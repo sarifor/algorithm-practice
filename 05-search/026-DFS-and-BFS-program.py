@@ -1,5 +1,8 @@
-# Backjoon 1260
-# 원래 문제의 DFS 부분 삭제
+# Backjoon 1260 (원래 문제의 DFS 처리 삭제)
+# DFS는 최대 깊이까지 탐색을 하는 반면, BFS는 인접 노드를 우선으로 탐색을 한다.
+# 예를 들어 '1 -> 2, 3'이고, '2 -> 5, 6'이라면,
+# "DFS는 1, 2, 5, 6 ... 순으로 가는데,
+# BFS는 1, 2, 3(인접 노드), 5, 6 ... 순으로 간다."
 
 from collections import deque
 N, M, Start = map(int, input().split())
