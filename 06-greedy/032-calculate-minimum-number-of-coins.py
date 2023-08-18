@@ -1,7 +1,9 @@
 # Backjoon 11047
+# Start from the largest denomination and keep adding denominations
+# while the remaining value is greater than 0.
 
-N, K = map(int, input().split()) # 동전 개수, 목표 금액
-A = [0] * N # 동전 데이터 리스트
+N, K = map(int, input().split())
+A = [0] * N
 
 for i in range(N):
     A[i] = int(input())
