@@ -1,6 +1,7 @@
 # Backjoon 1934
+# Find LCM(Least Common Multiple) using GCD(Greatest Common Divisor).
 
-def gcd(a, b): # 최대공약수 구하기
+def gcd(a, b):
     if b == 0:
       return a
     else:
@@ -10,5 +11,5 @@ t = int(input())
 
 for i in range(t):
     a, b = map(int, input().split())
-    result = a * b / gcd(a, b) # 주어진 두 수와, 두 수의 최대공약수로, 최소공배수 구하기
+    result = a * b / gcd(a, b)
     print(int(result))
