@@ -1,7 +1,7 @@
 # Backjoon 18352
 # Find vertices that have distance of K using BFS.
 # For each neighbor of the dequeued vertex that has not been visited,
-# set its distance to the distance of the dequeued vertext plus 1
+# set its distance to the distance of the dequeued vertex plus 1
 # and add it to the queue.
 
 import sys
