@@ -12,12 +12,12 @@ visited = [-1] * (N + 1) # 방문 리스트
 def BFS(v):
     queue = deque()
     queue.append(v)
-    visited[v] += 1
+    visited[v] += 1 # 최초 노드는 거리 0
     while queue:
         now_Node = queue.popleft()
         for i in A[now_Node]:
-            if visited[i] == -1:
-                visited[i] = visited[now_Node] + 1
+            if visited[i] == -1: # 현재 노드의 연결 노드 중 방문하지 않은 노드가 있다면
+                visited[i] = visited[now_Node] + 1 # '이전 도시의 방문 리스트값 + 1' 저장
                 queue.append(i)
         
 for _ in range(M): # 그래프 데이터 저장
@@ -26,7 +26,7 @@ for _ in range(M): # 그래프 데이터 저장
 
 BFS(X) # 너비 우선 탐색
 
-for i in range(N + 1): # 방문 리스트에서 값이 거리 K와 같은 경우, 해당 노드를 정답 리스트에 저장
+for i in range(N + 1): # 방문 거리가 K인 노드를 정답 리스트에 더함
     if visited[i] == K:
         answer.append(i)
 
