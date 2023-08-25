@@ -3,7 +3,7 @@
 # add them into a queue,
 # remove a vertex from the queue and print it,
 # decrease in-degree by 1 for all its neighbouring nodes,
-# and if the in-degree of neighbouring nodes is reduced to zero, then add it to the queue.
+# and if the in-degree of neighbouring nodes is reduced to 0, then add it to the queue.
 # Repeat steps above until the queue is empty.
 
 from collections import deque
