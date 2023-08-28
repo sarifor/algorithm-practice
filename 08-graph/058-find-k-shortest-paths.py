@@ -1,27 +1,34 @@
 # Backjoon 1854
+# Pop the value from pq, 
+# and store the vertex value in variable u and vertex distance in variable d.
+# For every adjacent vertex v of u 
+# check if the Kth distance value is more than 
+# the weight of u-v plus the distance value of u,
+# then update the Kth distance value of v 
+# and sort the k distances of vertex v.
 
 import sys
 import heapq
 input = sys.stdin.readline
-N, M, K = map(int, input().split()) # 노드 개수, 에지 개수, K번째
-W = [[] for _ in range(N+1)] # 인접 리스트
-distance = [[sys.maxsize] * K for _ in range(N+1)] # 거리 리스트
+N, M, K = map(int, input().split())
+W = [[] for _ in range(N+1)]
+distance = [[sys.maxsize] * K for _ in range(N+1)]
 
 for _ in range(M): 
-    a, b, c = map(int, input().split()) # a에서 b로 가고, 가중치 c 부여
-    W[a].append((b, c)) # 인접 리스트에 에지 정보 저장
+    a, b, c = map(int, input().split())
+    W[a].append((b, c))
 
-pq = [(0, 1)] # 우선순위 큐(heapq)에 '시작 도시의 최단 거리'와 '시작 도시' 저장
-distance[1][0] = 0 # 시작 도시의 최단 거리 저장
+pq = [(0, 1)]
+distance[1][0] = 0
 
 while pq:
-    cost, node = heapq.heappop(pq) # 거리 값이 제일 적은 노드가 선택됨
-    for nNode, nCost in W[node]: # 현재 노드의 연결 노드와 가중치를 꺼내서
-        sCost = cost + nCost # 새로운 총 거리를 구하고
-        if distance[nNode][K-1] > sCost: # 연결 노드의 K번째 경로와 신규 경로 비교
+    cost, node = heapq.heappop(pq)
+    for nNode, nCost in W[node]:
+        sCost = cost + nCost
+        if distance[nNode][K-1] > sCost:
             distance[nNode][K-1] = sCost
             distance[nNode].sort()
-            heapq.heappush(pq, [sCost, nNode]) # 우선순위 큐에 새로운 데이터(거리, 노드) 추가
+            heapq.heappush(pq, [sCost, nNode])
 
 for i in range(1, N+1):
     if distance[i][K-1] == sys.maxsize:
