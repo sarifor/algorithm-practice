@@ -11,18 +11,16 @@ import sys
 from queue import PriorityQueue
 
 input = sys.stdin.readline
-N, M = map(int, input().split())  # 노드 수, 에지 수
-pq = PriorityQueue()  # 우선순위 큐
-parent = [0] * (N + 1)  # 대표 노드 저장 리스트
+N, M = map(int, input().split())
+pq = PriorityQueue()
+parent = [0] * (N + 1)
 
-# 대표 노드 저장 리스트 초기화
 for i in range(N + 1):
   parent[i] = i
 
-# 우선순위 큐에 에지 정보 저장
 for i in range(M):
   s, e, w = map(int, input().split())
-  pq.put((w, s, e))  # 우선순위 큐이므로 자동 정렬
+  pq.put((w, s, e))
 
 
 def find(a):
@@ -40,17 +38,14 @@ def union(a, b):
     parent[b] = a
 
 
-useEdge = 0  # 사용 에지 수
-result = 0  # 정답
+useEdge = 0
+result = 0
 
-# 사용한 에지 수가 '노드 수 -1'이 될 때까지
 while useEdge < N - 1:
   w, s, e = pq.get()
-  # 에지 시작점과 끝점의 부모 노드가 다르면
   if find(s) != find(e):
-    union(s, e)  # 연결하고
-    result += w  # 에지 가중치를 정답에 더하고
-    useEdge += 1  # 사용 에지 수 1 증가
+    union(s, e)
+    result += w
+    useEdge += 1
 
-# 정답 출력
 print(result)
