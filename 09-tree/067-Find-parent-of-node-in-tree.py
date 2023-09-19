@@ -1,10 +1,8 @@
 # Backjoon 11725
 # Store the tree data into an adjacency list,
 # and put nodes from the root node into DFS function.
-# If the node has unvisited child,
-# Store its parent in answer list.
-# If children are all visited,
-# go up to the parent node and search again.
+# If the node has unvisited child, Store its parent in answer list.
+# If children are all visited, go up to the parent node and search again.
 
 import sys
 
