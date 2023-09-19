@@ -1,5 +1,5 @@
 # Backjoon 11725
-# Store the tree data into adjacency list,
+# Store the tree data into an adjacency list,
 # and put nodes from the root node into DFS function.
 # If the node has unvisited child,
 # Store its parent in answer list.
