@@ -1,4 +1,18 @@
 # Backjoon 2042
+'''
+1. Initialize segment tree.
+Leaf Nodes are the elements of the input array. 
+Each internal node represents some merging of the leaf nodes.
+For each node at index i, the left child is at index (2*i+1), right child at (2*i+2)
+
+2. Update value.
+Add the diff to the value of the node and its parents,
+
+3. Calculate prefix sum.
+If the range of the current node while traversing the tree is not in the given range then did not add the value of that node in answer.
+If the range of node is partially overlapped with the given range then move either left or right according to the overlapping.
+If the range is completely overlapped by the given range then add it to the answer.
+'''
 
 import sys
 input = sys.stdin.readline
@@ -10,11 +24,10 @@ length = N # 리프 노드 개수
 # 리프 노드의 개수를 2씩 나누어 가면서 높이 계산
 while length != 0:
     length //= 2 # Divides the variable with floor division and assigns the new amount to the variable.
-    treeHeight += 1
+    treeHeight += 1 # Q. length == 0일 때도 루프가 작동하여 treeHeight == 4가 되어버리는데, 고치려면?
 
 # 트리 크기 구하기
 # 2의 'treeHeight + 1' 승
-# Q. length = 8일 때 treeSize가 16이 아니라 32가 나오는 이유는?
 treeSize = pow(2, treeHeight + 1)
 
 # 리프 노드 시작 인덱스
@@ -49,11 +62,11 @@ def getSum(s, e):
     while s <= e:
         if s % 2 == 1:
             partSum += tree[s]
-            s += 1
+            s += 1 # 해당 노드를 질의값에 영향을 미치는 독립 노드로 선택하고
         if e % 2 == 0:
             partSum += tree[e]
             e -= 1
-        s = s // 2
+        s = s // 2 # 질의 범위에 해당하는 부모 노드로 이동
         e = e // 2
     return partSum
 
