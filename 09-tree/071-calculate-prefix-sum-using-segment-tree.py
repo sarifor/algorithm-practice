@@ -24,7 +24,7 @@ length = N # 리프 노드 개수
 # 리프 노드의 개수를 2씩 나누어 가면서 높이 계산
 while length != 0:
     length //= 2 # Divides the variable with floor division and assigns the new amount to the variable.
-    treeHeight += 1 # Q. length == 0일 때도 루프가 작동하여 treeHeight == 4가 되어버리는데, 고치려면?
+    treeHeight += 1 # Q. length = 8일 경우, treeHeight == 3을 기대했으나, length == 0일 때도 루프가 작동하여 treeHeight == 4가 되어버린다. 고쳐야 하나?
 
 # 트리 크기 구하기
 # 2의 'treeHeight + 1' 승
