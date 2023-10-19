@@ -7,6 +7,7 @@ print(a) # [1, 2, 3]
 print(10 == 10) # True
 print(1 == 1.0) # True
 print('10' == 10) # False # "Python에선 ==로 값 비교 시 데이터 타입 변환까진 안 해줌"
+print('Winter' == 'winter') # False
 
 a = [1, 2, 3]
 b = a
