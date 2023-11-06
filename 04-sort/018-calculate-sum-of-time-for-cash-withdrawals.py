@@ -1,4 +1,5 @@
 # Backjoon 11399
+# Insertion sort
 # Place data in acsending order using insertion sort, 
 # calculate prefix sum of time for each customer, and calculate sum of prefix sums.
 

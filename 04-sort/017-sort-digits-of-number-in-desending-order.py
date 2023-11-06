@@ -1,4 +1,5 @@
 # Baekjoon 1427
+# Selection sort
 
 import sys
 print = sys.stdout.write

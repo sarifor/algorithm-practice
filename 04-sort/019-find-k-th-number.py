@@ -1,5 +1,6 @@
 # Backjoon 11004
-# Quick-sort numbers in acsending order until pivot location is equal to K 
+# Quick sort
+# Quick-sort numbers in acsending order until pivot location is equal to K
 
 import sys
 input = sys.stdin.readline

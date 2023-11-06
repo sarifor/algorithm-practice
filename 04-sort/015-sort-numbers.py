@@ -1,4 +1,5 @@
 # Baekjoon 2750
+# Bubble sort
 # After each iteration, one less element(the last one) is needed to be compared
 # until there are no more elements left to be compared.
 
