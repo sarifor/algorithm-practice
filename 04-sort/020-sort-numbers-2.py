@@ -1,4 +1,5 @@
 # Backjoon 2751
+# Merge sort
 # Divide the array A into two, 
 # select smaller value comparing two temp arrays,
 # save it into array A,
